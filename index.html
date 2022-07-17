@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Decision Making in Multi-Agent Systems</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <meta name="Decision Making in Multi-Agent System IROS 2022" content="Decision Making in Multi-Agent System IROS 2022" />
+<head>
+  <title>Decision Making in Multi-Agent Systems</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!--
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="Decision Making in Multi-Agent System IROS 2022"
+    content="Decision Making in Multi-Agent System IROS 2022" />
+
+  <!--
     //////////////////////////////////////////////////////
 
     FREE TEMPLATE
@@ -22,123 +24,175 @@
     //////////////////////////////////////////////////////
     -->
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,700,900|Display+Playfair:200,300,400,700">
-    <link rel="stylesheet" href="fonts/icomoon/style.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,700,900|Display+Playfair:200,300,400,700">
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/jquery-ui.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
 
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
 
-    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
 
 
 
-    <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/aos.css">
 
-    <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">
 
-    <style>
-      table {
-        border-collapse: separate;
-        border-spacing: 20px 0;
-      }
+  <style>
+    table {
+      border-collapse: separate;
+      border-spacing: 20px 0;
+    }
 
-      td {
-        padding: 5px;
-      }
-      </style>
+    td {
+      padding: 5px;
+    }
+  </style>
 
-  </head>
-  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="200">
+  <style>
+    .collapsible {
+      background-color: white;
+      color: maroon;
+      cursor: pointer;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+    }
+
+    .collapsible:hover {
+      background-color: rgb(240, 240, 240);
+    }
+
+    .collapsible:after {
+      content: '\002B';
+      color: black;
+      font-weight: bold;
+      float: right;
+      margin-left: 5px;
+      margin-right: 15px;
+    }
+
+    .left-col {
+      width: 15%;
+    }
+
+    .collapsible.active::after {
+      content: "\2212";
+    }
+
+    .hidden-content {
+      padding: 0 5px;
+      overflow: hidden;
+      background-color: white;
+      max-height: 0;
+      line-height: 115%;
+      transition: max-height 0.2s ease-out;
+    }
+  </style>
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="200">
 
   <!-- <div class="site-wrap"> -->
 
-    <div class="site-mobile-menu site-navbar-target">
-      <div class="site-mobile-menu-header">
-        <div class="site-mobile-menu-close mt-3">
-          <span class="icon-close2 js-menu-toggle"></span>
-        </div>
+  <div class="site-mobile-menu site-navbar-target">
+    <div class="site-mobile-menu-header">
+      <div class="site-mobile-menu-close mt-3">
+        <span class="icon-close2 js-menu-toggle"></span>
       </div>
-      <div class="site-mobile-menu-body"></div>
     </div>
+    <div class="site-mobile-menu-body"></div>
+  </div>
 
-    <header class="site-navbar py-3 js-site-navbar site-navbar-target" role="banner" id="site-navbar">
+  <header class="site-navbar py-3 js-site-navbar site-navbar-target" role="banner" id="site-navbar">
 
-      <div class="container">
-        <div class="row align-items-center">
+    <div class="container">
+      <div class="row align-items-center">
 
-          <div class="col-11 col-xl-2 site-logo">
-            <p class="mb-0"><a href="index.html" class="text-white mb-0"></a></p>
-          </div>
-          <div class="col-12 col-md-10 d-none d-xl-block">
-            <nav class="site-navigation position-relative text-right" role="navigation">
+        <div class="col-11 col-xl-2 site-logo">
+          <p class="mb-0">
+            <a href="index.html" class="text-white mb-0"></a>
+          </p>
+        </div>
+        <div class="col-12 col-md-10 d-none d-xl-block">
+          <nav class="site-navigation position-relative text-right" role="navigation">
 
-              <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                <li><a href="#section-home" class="nav-link">Home</a></li>
-                <li class="has-children">
-                <li><a href="#section-about" class="nav-link">About</a></li>
-                <li><a href="#section-cfp" class="nav-link">Call for Papers</a></li>
-                <!--li><a href="#section-videos" class="nav-link">Videos</a></li-->
-                <li><a href="#section-speakers" class="nav-link">Speakers</a></li>
-                <li><a href="#section-program" class="nav-link">Program</a></li>
-                <li><a href="#section-our-team" class="nav-link">Organizers</a></li>
-                <li><a href="#section-sponsors" class="nav-link">Sponsors</a></li>
-                <!--li><a href="#section-services" class="nav-link">Services</a></li>
+            <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
+              <li><a href="#section-home" class="nav-link">Home</a></li>
+              <li class="has-children">
+              <li><a href="#section-about" class="nav-link">About</a></li>
+              <li><a href="#section-cfp" class="nav-link">Call for Papers</a></li>
+              <!--li><a href="#section-videos" class="nav-link">Videos</a></li-->
+              <li><a href="#section-speakers" class="nav-link">Speakers</a></li>
+              <li><a href="#section-program" class="nav-link">Program</a></li>
+              <li><a href="#section-our-team" class="nav-link">Organizers</a></li>
+              <li><a href="#section-sponsors" class="nav-link">Sponsors</a></li>
+              <!--li><a href="#section-services" class="nav-link">Services</a></li>
                 <li><a href="#section-industries" class="nav-link">Industries</a></li>
                 <li><a href="#section-blog" class="nav-link">Blog</a></li>
                 <li><a href="#section-contact" class="nav-link">Contact</a></li-->
-              </ul>
-            </nav>
-          </div>
-
-
-          <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle"><span class="icon-menu h3"></span></a></div>
-
-          </div>
-
+            </ul>
+          </nav>
         </div>
+
+
+        <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#"
+            class="site-menu-toggle js-menu-toggle"><span class="icon-menu h3"></span></a></div>
+
       </div>
 
-    </header>
+    </div>
+    </div>
+
+  </header>
 
 
 
-    <div class="site-blocks-cover overlay" style="background-image: url(images/iros_banner_web.png);" data-aos="fade" data-stellar-background-ratio="0.5" id="section-home">
-      <div class="container">
-        <div class="row align-items-center justify-content-center text-center">
+  <div class="site-blocks-cover overlay" style="background-image: url(images/iros_banner_web.png);" data-aos="fade"
+    data-stellar-background-ratio="0.5" id="section-home">
+    <div class="container">
+      <div class="row align-items-center justify-content-center text-center">
 
-          <div class="col-md-8" data-aos="fade-up" data-aos-delay="300">
+        <div class="col-md-8" data-aos="fade-up" data-aos-delay="300">
 
 
-            <h1 class="text-white font-weight-light text-uppercase font-weight-bold" data-aos="fade-up">Decision Making in Multi-Agent Systems </h1>
-            <br>
-            <h2 class="mb-5" data-aos="fade-up" data-aos-delay="100" style="color:white">2022 IROS Full-Day Workshop</h2>
-            <h2 class="mb-5" data-aos="fade-up" data-aos-delay="100" style="color:white">Oct 27, 2022</h2>
-            <h4 class="mb-5" data-aos="fade-up" data-aos-delay="100" style="color:white">[This workshop will be held in hybrid form]</h4>
-            <h4 class="mb-5" data-aos="fade-up" data-aos-delay="100" style="color:white">[Registration is Free]</h4>
-            <!--p data-aos="fade-up" data-aos-delay="200"><a href="https://free-template.co" class="btn btn-primary py-3 px-5 text-white">Start Racing!</a></p-->
+          <h1 class="text-white font-weight-light text-uppercase font-weight-bold" data-aos="fade-up">Decision Making in
+            Multi-Agent Systems </h1>
+          <br>
+          <h2 class="mb-5" data-aos="fade-up" data-aos-delay="100" style="color:white">2022 IROS Full-Day Workshop</h2>
+          <h2 class="mb-5" data-aos="fade-up" data-aos-delay="100" style="color:white">Oct 27, 2022</h2>
+          <h4 class="mb-5" data-aos="fade-up" data-aos-delay="100" style="color:white">[This workshop will be held in
+            hybrid form]</h4>
+          <h4 class="mb-5" data-aos="fade-up" data-aos-delay="100" style="color:white">[Registration is Free]</h4>
+          <!--p data-aos="fade-up" data-aos-delay="200"><a href="https://free-template.co" class="btn btn-primary py-3 px-5 text-white">Start Racing!</a></p-->
 
-          </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="site-section" id="section-about">
-      <div class="container">
+  <div class="site-section" id="section-about">
+    <div class="container">
 
       <div class="row mb-5">
-      <h3>Announcement:</h3> 
-      <p><font size="+1">All authors and participants must follow IROS’s guidelines for the registration. 
-        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-      </font></p>
+        <h3>Announcement:</h3>
+        <p>
+          <font size="+1">All authors and participants must follow IROS’s guidelines for the registration.
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          </font>
+        </p>
       </div>
       <!-- <br>
       <p data-aos="fade-up" data-aos-delay="200"><a href="https://forms.gle/i9xpkbGUuz52wMLG9" target="_blank" class="btn btn-primary py-3 px-5 text-white">Register Here [Free]</a></p> -->
-    
+
       <!-- <h5> Thank you to all our participants and speakers for making this workshop a huge success! </h5>
       <h4> Congratulations to our joint best paper award winners </h4>
 
@@ -149,77 +203,124 @@
           </ul>
      
       </div> -->
-    
 
-        <div class="row mb-5">
 
-            <div class="text-justify pb-1 border-primary mb-4">
-              <h2 class="text-primary">About this workshop</h2>
-            </div>
-            <p> <font size="+1">Multi-agent systems are widely applicable to real-world problems and applications ranging from warehouse automation to environmental monitoring, autonomous driving, and even game playing. While multi-agent systems can execute time-sensitive, complex, and large-scale problems that are intractable for single agents, it is challenging to efficiently coordinate such systems for cooperative or non-cooperative tasks. On the other hand, decision making and reinforcement learning in single-agent scenarios have seen tremendous achievements in recent years; yet, translation of many single-agent techniques to the multi-agent domain may not be straightforward. The main challenges lie intrinsically in the nature of the multi-agent systems, including: complex interaction dynamics, constrained inter-agent communication, complex optimality, heterogeneity in the system and the potential presence of adversaries.
-            </font></p>
-            <p><font size="+1">In this workshop, we aim to bring together multi-agent systems experts and researchers from different disciplines, ranging from robotics, machine learning, and game theory, to share the recent advances, open problems, and challenges in their respective fields and brainstorm research thrusts that will lead us towards revolutionary advances in multi-agent systems.  The workshop will consist of invited speakers, presentations from researchers with original research papers, and poster sessions. We hope that through our multi-faceted workshop and the talks of our expert speakers, we can attract the interest of the robotics community on research challenges specific to multi-agent decision making.
-            </font></p>
+      <div class="row mb-5">
+
+        <div class="text-justify pb-1 border-primary mb-4">
+          <h2 class="text-primary">About this workshop</h2>
         </div>
+        <p>
+          <font size="+1">Multi-agent systems are widely applicable to real-world problems and applications ranging from
+            warehouse automation to environmental monitoring, autonomous driving, and even game playing. While
+            multi-agent systems can execute time-sensitive,
+            complex, and large-scale problems that are intractable for single agents, it is challenging to efficiently
+            coordinate such systems for cooperative or non-cooperative tasks. On the other hand, decision making and
+            reinforcement learning
+            in single-agent scenarios have seen tremendous achievements in recent years; yet, translation of many
+            single-agent techniques to the multi-agent domain may not be straightforward. The main challenges lie
+            intrinsically in the nature
+            of the multi-agent systems, including: complex interaction dynamics, constrained inter-agent communication,
+            complex optimality, heterogeneity in the system and the potential presence of adversaries.
+          </font>
+        </p>
+        <p>
+          <font size="+1">In this workshop, we aim to bring together multi-agent systems experts and researchers from
+            different disciplines, ranging from robotics, machine learning, and game theory, to share the recent
+            advances, open problems, and challenges
+            in their respective fields and brainstorm research thrusts that will lead us towards revolutionary advances
+            in multi-agent systems. The workshop will consist of invited speakers, presentations from researchers with
+            original research
+            papers, and poster sessions. We hope that through our multi-faceted workshop and the talks of our expert
+            speakers, we can attract the interest of the robotics community on research challenges specific to
+            multi-agent decision making.
+          </font>
+        </p>
       </div>
     </div>
+  </div>
 
-<div class="site-section" id="section-cfp">
-      <div class="container">
-        <div class="row mb-5">
+  <div class="site-section" id="section-cfp">
+    <div class="container">
+      <div class="row mb-5">
 
-            <div class="text-justify pb-1 border-primary mb-4">
-              <h2 class="text-primary">Call for Contributions</h2>
-            </div>
-            <p>Efficient decision-making, in robotics, game-playing, social agents, etc., can be considered an essential aspect and a challenging problem in multi-agent systems, and contributions here have the potential making a breakthrough in enabling high-performing collaborative and coordinated multi-agent teams. For a successful multi-agent collaboration in a complex (potentially adversarial) environment, agents must be able to rationalize their actions by reasoning about their teammates' action-decisions and their capabilities and characteristics, as well as the environment states under partial observability. Such enhanced reasoning can also be achieved through efficient inter-agent communication, which opens a new horizon to the realm of multi-agent decision-making. These problems make an interesting opportunity to explore multi-agent systems under collaborative and mixed collaborative-competitive settings to improve team coordination for high-quality cooperation. 
-            </p>
-            <br>
-            <p>The objective of this workshop is to raise awareness of the overall challenges in multi-agent decision-making area to the IEEE Robotics and Automation Society community. This workshop will serve as a catalyst to exchange ideas and recent methodologies in this this unique and important application, that requires innovations across core topics in robotics, AI, and ML.
-            </p>
-            <br>
-            <h2>Topics of Interest</h2> 
-            <ul>
-              <li>Multi-agent reinforcement learning</li>
-              <li>Multi-agent planning and scheduling</li>
-              <li>Multi-agent systems in adversarial environments</li>
-              <li>Bounded rationality</li>
-              <li>Heterogeneous team coordination</li>
-              <li>Emergent communication learning in multi-agent systems</li>
-              <li>Multi-agent systems and challenges: scalability, credit assignment, non-stationarity, etc.</li>
-              <li>Multi-agent decision-making and Transformers: decision-making as a sequence modeling problem </li>
-              <li>Multi-agent decisions and Social dilemmas</li>
-              <li>Explainable multi-agent decision-making</li>
-            </ul>
-
+        <div class="text-justify pb-1 border-primary mb-4">
+          <h2 class="text-primary">Call for Contributions</h2>
         </div>
-
-        <div class="row mb-5">
-
-            <div class="text-justify pb-1 border-primary mb-4">
-              <h2 class="text-primary">Paper Submission:</h2>
-            </div>
-            <p>We invite short papers (4-6 pages, including references) for submission to the workshop related to the topics above and the theme of multi-agent systems. Position papers, work in progress and novel but not necessarily thoroughly worked out ideas are encouraged. The submissions will be reviewed by the  program committee and we will accept papers for oral (live) presentations, or a video highlight. Each paper will undergo a thorough review process and receive two high quality reviews. Accepted papers will be made available on the workshop website after the IROS conference.</p>
-            <br>
-            <p>The paper should be in PDF format and use the standard IEEE IROS template: <a href="http://ras.papercept.net/conferences/support/tex.php"> Tex</a> or <a href="http://ras.papercept.net/conferences/support/word.php"> MS Word</a>.</p>
-
-            <br>
-            <p> Please use the following EasyChair link for paper submissions: <a href="https://easychair.org/conferences/?conf=iros22dmmas" target="_blank"> Submission Link </a>.  </p>
-
-        </div>
-
-        <h2>Important Dates</h2>
+        <p>Efficient decision-making, in robotics, game-playing, social agents, etc., can be considered an essential
+          aspect and a challenging problem in multi-agent systems, and contributions here have the potential making a
+          breakthrough in enabling
+          high-performing collaborative and coordinated multi-agent teams. For a successful multi-agent collaboration in
+          a complex (potentially adversarial) environment, agents must be able to rationalize their actions by reasoning
+          about their
+          teammates' action-decisions and their capabilities and characteristics, as well as the environment states
+          under partial observability. Such enhanced reasoning can also be achieved through efficient inter-agent
+          communication, which
+          opens a new horizon to the realm of multi-agent decision-making. These problems make an interesting
+          opportunity to explore multi-agent systems under collaborative and mixed collaborative-competitive settings to
+          improve team coordination
+          for high-quality cooperation.
+        </p>
+        <br>
+        <p>The objective of this workshop is to raise awareness of the overall challenges in multi-agent decision-making
+          area to the IEEE Robotics and Automation Society community. This workshop will serve as a catalyst to exchange
+          ideas and recent
+          methodologies in this this unique and important application, that requires innovations across core topics in
+          robotics, AI, and ML.
+        </p>
+        <br>
+        <h2>Topics of Interest</h2>
         <ul>
-          <li>Submission site opens: July 5, 2022</li>
-          <li>Submission deadline: September 15, 2022 [Anywhere on Earth (GMT -12)][Firm deadline, no extensions]</li>
-          <li>Notice of Acceptance: Octorber 1, 2022</li>
+          <li>Multi-agent reinforcement learning</li>
+          <li>Multi-agent planning and scheduling</li>
+          <li>Multi-agent systems in adversarial environments</li>
+          <li>Bounded rationality</li>
+          <li>Heterogeneous team coordination</li>
+          <li>Emergent communication learning in multi-agent systems</li>
+          <li>Multi-agent systems and challenges: scalability, credit assignment, non-stationarity, etc.</li>
+          <li>Multi-agent decision-making and Transformers: decision-making as a sequence modeling problem </li>
+          <li>Multi-agent decisions and Social dilemmas</li>
+          <li>Explainable multi-agent decision-making</li>
         </ul>
 
+      </div>
+
+      <div class="row mb-5">
+
+        <div class="text-justify pb-1 border-primary mb-4">
+          <h2 class="text-primary">Paper Submission:</h2>
+        </div>
+        <p>We invite short papers (4-6 pages, including references) for submission to the workshop related to the topics
+          above and the theme of multi-agent systems. Position papers, work in progress and novel but not necessarily
+          thoroughly worked
+          out ideas are encouraged. The submissions will be reviewed by the program committee and we will accept papers
+          for oral (live) presentations, or a video highlight. Each paper will undergo a thorough review process and
+          receive two high
+          quality reviews. Accepted papers will be made available on the workshop website after the IROS conference.</p>
+        <br>
+        <p>The paper should be in PDF format and use the standard IEEE IROS template: <a
+            href="http://ras.papercept.net/conferences/support/tex.php"> Tex</a> or <a
+            href="http://ras.papercept.net/conferences/support/word.php"> MS Word</a>.</p>
+
+        <br>
+        <p> Please use the following EasyChair link for paper submissions: <a
+            href="https://easychair.org/conferences/?conf=iros22dmmas" target="_blank"> Submission Link </a>. </p>
 
       </div>
+
+      <h2>Important Dates</h2>
+      <ul>
+        <li>Submission site opens: July 5, 2022</li>
+        <li>Submission deadline: September 15, 2022 [Anywhere on Earth (GMT -12)][Firm deadline, no extensions]</li>
+        <li>Notice of Acceptance: Octorber 1, 2022</li>
+      </ul>
+
+
     </div>
+  </div>
 
 
-    <!--div class="site-section border-bottom" id="section-videos">
+  <!--div class="site-section border-bottom" id="section-videos">
       <div class="container">
         <div class="row justify-content-center mb-5">
           <div class="col-md-7 text-center border-primary">
@@ -335,204 +436,379 @@
       </div>
     </div-->
 
-    <div class="site-section border-bottom" id="section-speakers">
-      <div class="container">
-        <div class="row justify-content-center mb-5">
-          <div class="col-md-7 text-center border-primary">
-            <h2 class="font-weight-light text-primary" data-aos="fade">Invited Speakers</h2>
-          </div>
+  <div class="site-section border-bottom" id="section-speakers">
+    <div class="container">
+      <div class="row justify-content-center mb-5">
+        <div class="col-md-7 text-center border-primary">
+          <h2 class="font-weight-light text-primary" data-aos="fade">Invited Speakers</h2>
         </div>
-        <div class="row">
-          <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="100">
-            <div class="person">
-              <img src="images/speakers/NoraAyanian.jpg" alt="Image" class="img-fluid rounded mb-5 w-75 rounded-circle">
-              <h3>Nora Ayanian</h3>
-              <p class="mb-4"> Brown University </p>
-              <ul class="ul-social-circle">
-                <!--li><a href="https://www.linkedin.com/in/nayanian/" target="_blank"><span class="icon-linkedin"></span></a></li-->
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="200">
-            <div class="person">
-              <img src="images/speakers/PeterStone.png" alt="Image" class="img-fluid rounded mb-5 w-75 rounded-circle">
-              <h3>Peter Stone</h3>
-              <p class="mb-4">University of Texas at Austin</p>
-              <ul class="ul-social-circle">
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="300">
-            <div class="person">
-              <img src="images/speakers/AmandaProrok.jpg" alt="Image" class="img-fluid rounded mb-5 w-75 rounded-circle">
-              <h3>Amanda Prorok</h3>
-              <p class="mb-4">University of Cambridge</p>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="100">
-            <div class="person">
-              <img src="images/speakers/ChiJin.jpg" alt="Image" class="img-fluid rounded mb-5 w-75 rounded-circle">
-              <h3>Chi Jin</h3>
-              <p class="mb-4">Princeton University</p>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="100">
-            <div class="person">
-              <img src="images/speakers/SvenKoenig.jpg" alt="Image" class="img-fluid rounded mb-5 w-75 rounded-circle">
-              <h3>Sven Koenig</h3>
-              <p class="mb-4">University of Southern California</p>
-              <ul class="ul-social-circle">
-                <!--li><a href="https://www.linkedin.com/in/madhurbehl/" target="_blank"><span class="icon-linkedin"></span></a></li-->
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="200">
-            <div class="person">
-              <img src="images/speakers/BoAn.jpg" alt="Image" class="img-fluid rounded mb-5 w-75 rounded-circle">
-              <h3>Bo An</h3>
-              <p class="mb-4">Nanyang Technical University</p>
-              <ul class="ul-social-circle">
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="300">
-            <div class="person">
-              <img src="images/speakers/KarlTuyls.jpg" alt="Image" class="img-fluid rounded mb-5 w-75 rounded-circle">
-              <h3>Karl Tuyls</h3>
-              <p class="mb-4">University of Liverpool</p>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="100">
-            <div class="person">
-              <img src="images/speakers/JakobFoerster.jpeg" alt="Image" class="img-fluid rounded mb-5 w-75 rounded-circle">
-              <h3>Jakob Foerster</h3>
-              <p class="mb-4">University of Oxford</p>
-              </ul>
-            </div>
-          </div>
-        </div>
-
       </div>
-    </div>
-
-    <div class="site-section" id="section-program">
-      <div class="container">
-        <div class="row mb-5">
-            <div class="text-justify pb-1 border-primary mb-4">
-              <h2 class="text-primary">Workshop schedule</h2>
-            </div>
+      <div class="row">
+        <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="100">
+          <div class="person">
+            <img src="images/speakers/NoraAyanian.jpg" alt="Image" class="img-fluid rounded mb-5 w-75 rounded-circle">
+            <h3>Nora Ayanian</h3>
+            <p class="mb-4"> Brown University </p>
+            <ul class="ul-social-circle">
+              <!--li><a href="https://www.linkedin.com/in/nayanian/" target="_blank"><span class="icon-linkedin"></span></a></li-->
+            </ul>
+          </div>
         </div>
-        
-        <div class="row">
-          <font size="4" face="Helvetica" >
+        <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="200">
+          <div class="person">
+            <img src="images/speakers/PeterStone.png" alt="Image" class="img-fluid rounded mb-5 w-75 rounded-circle">
+            <h3>Peter Stone</h3>
+            <p class="mb-4">University of Texas at Austin</p>
+            <ul class="ul-social-circle">
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="300">
+          <div class="person">
+            <img src="images/speakers/AmandaProrok.jpg" alt="Image" class="img-fluid rounded mb-5 w-75 rounded-circle">
+            <h3>Amanda Prorok</h3>
+            <p class="mb-4">University of Cambridge</p>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="100">
+          <div class="person">
+            <img src="images/speakers/ChiJin.jpg" alt="Image" class="img-fluid rounded mb-5 w-75 rounded-circle">
+            <h3>Chi Jin</h3>
+            <p class="mb-4">Princeton University</p>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="100">
+          <div class="person">
+            <img src="images/speakers/SvenKoenig.jpg" alt="Image" class="img-fluid rounded mb-5 w-75 rounded-circle">
+            <h3>Sven Koenig</h3>
+            <p class="mb-4">University of Southern California</p>
+            <ul class="ul-social-circle">
+              <!--li><a href="https://www.linkedin.com/in/madhurbehl/" target="_blank"><span class="icon-linkedin"></span></a></li-->
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="200">
+          <div class="person">
+            <img src="images/speakers/BoAn.jpg" alt="Image" class="img-fluid rounded mb-5 w-75 rounded-circle">
+            <h3>Bo An</h3>
+            <p class="mb-4">Nanyang Technical University</p>
+            <ul class="ul-social-circle">
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="300">
+          <div class="person">
+            <img src="images/speakers/KarlTuyls.jpg" alt="Image" class="img-fluid rounded mb-5 w-75 rounded-circle">
+            <h3>Karl Tuyls</h3>
+            <p class="mb-4">University of Liverpool</p>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="100">
+          <div class="person">
+            <img src="images/speakers/JakobFoerster.jpeg" alt="Image"
+              class="img-fluid rounded mb-5 w-75 rounded-circle">
+            <h3>Jakob Foerster</h3>
+            <p class="mb-4">University of Oxford</p>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="site-section" id="section-program">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="text-justify pb-1 border-primary mb-4">
+          <h2 class="text-primary">Workshop schedule</h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <font size="4" face="Helvetica">
           <table width="100%">
-          <tbody>
-            <tr>
-              <td style="color:navy"></td> <br>
-              <td style="color:maroon">All times in JST (UTC + 09)</td>
-            </tr>
-            <tr>
-              <td style="color:navy">9:00</td> <br>
-              <td style="color:navy">Welcome Remarks</td>
-            </tr>
-            <tr>
-              <td style="color:navy">9:10a</td>
-              <td style="color:navy">Invited Session 1</td>
-            </tr>
-            <tr>
-              <td>9:10-9:35a</td>
-              <td style="color:maroon">Peter Stone (UT Austin)</td>
-            </tr>
-            <tr>
-              <td>9:35-10:00a</td>
-              <td style="color:maroon">Sven Koenig (USC) - Multi-Agent Path Finding and Its Applications</td>
-            </tr>
-            <tr>
-              <td>10:00-10:15a</td>
-              <td>Q/A and Discussion for Invited Session 1</td>
-            </tr>
-            <tr>
-              <td style="color:navy">10:15a</td>
-              <td style="color:navy">Poster Session</td>
-            </tr>
-            <tr>
-              <td style="color:navy">11:15a</td>
-              <td style="color:navy">Invited Session 2</td>
-            </tr>
-            <tr>
-              <td>11:15-11:40a</td>
-              <td style="color:maroon">Nora Ayanian (Brown)</td>
-            </tr>
-            <tr>
-              <td>11:40-12:05p</td>
-              <td style="color:maroon">Amanda Prorok (Cambridge)</td>
-            </tr>
-            <tr>
-              <td>12:05-12:20p</td>
-              <td>Q/A and Discussion for Invited Session 2</td>
-            </tr>
-            <!--tr>
+            <tbody>
+              <tr>
+                <td class="left-col" style="color:navy"></td> <br>
+                <td style="color:maroon">All times in JST (UTC + 09)</td>
+              </tr>
+              <tr>
+                <td class="left-col" style="color:navy">9:00</td> <br>
+                <td style="color:navy">Welcome Remarks</td>
+              </tr>
+              <tr>
+                <td class="left-col" style="color:navy">9:10a</td>
+                <td style="color:navy">Invited Session 1</td>
+              </tr>
+              <tr>
+                <td>9:10-9:35a</td>
+                <td>
+                  <div class="collapsible">Peter Stone (UT Austin)</div>
+                  <div class="hidden-content">
+                    <p style="margin-top:8pt; margin-bottom:7pt; text-align:justify">
+                      <b>
+                        <font size="+1">Abstract:</font>
+                      </b>
+                      TBA.
+                    </p>
+                    <p style="text-align:justify">
+                      <b>
+                        <font size="+1">Bio:</font>
+                      </b>
+                      TBA.
+                    </p>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>9:35-10:00a</td>
+                <td>
+                  <div class="collapsible">Sven Koenig (USC) - Multi-Agent Path Finding and Its Applications</div>
+                  <div class="hidden-content">
+                    <p style="margin-top:8pt; margin-bottom:7pt; text-align:justify">
+                      <b>
+                        <font size="+1">Abstract:</font>
+                      </b>
+                      The coordination of robots and other agents becomes more and more important for industry. For
+                      example, on the order of one thousand robots already navigate autonomously in fulfillment centers
+                      to
+                      move inventory pods all the way from their storage locations to the picking stations that need the
+                      products they store (and vice versa). Optimal and, in some cases, even approximately optimal path
+                      planning for these robots is NP-hard, yet one must find high-quality collision-free paths for them
+                      in real-time. Algorithms for such multi-agent path-finding problems have been studied in robotics
+                      and theoretical computer science for a longer time but are insufficient since they are either fast
+                      but of insufficient solution quality or of good solution quality but too slow. In this talk, I
+                      will
+                      discuss both recent cool ideas for solving such multi-agent path-finding problems (including the
+                      roles of planning and machine learning) and several of their applications, including in
+                      warehousing.
+                      Our research on this topic has been funded by both NSF and Amazon Robotics.
+                    </p>
+                    <p style="text-align:justify">
+                      <b>
+                        <font size="+1">Bio:</font>
+                      </b>
+                      Sven Koenig is Dean's Professor of Computer Science at the University of Southern California and a
+                      AAAI, AAAS, ACM, and IEEE fellow. Most of his research centers around techniques for decision
+                      making (planning and learning) that enable single situated agents (such as robots or
+                      decision-support systems) and teams of agents to act intelligently in their environments and
+                      exhibit goal-directed behavior in real-time, even if they have only incomplete knowledge of their
+                      environment, imperfect abilities to manipulate it, limited or noisy perception or insufficient
+                      reasoning speed. Additional information about him can be found on his webpages: idm-lab.org.
+                    </p>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>10:00-10:15a</td>
+                <td>Q/A and Discussion for Invited Session 1</td>
+              </tr>
+              <tr>
+                <td style="color:navy">10:15a</td>
+                <td style="color:navy">Poster Session</td>
+              </tr>
+              <tr>
+                <td style="color:navy">11:15a</td>
+                <td style="color:navy">Invited Session 2</td>
+              </tr>
+              <tr>
+                <td>11:15-11:40a</td>
+                <td>
+                  <div class="collapsible">Nora Ayanian (Brown)</div>
+                  <div class="hidden-content">
+                    <p style="margin-top:8pt; margin-bottom:7pt; text-align:justify">
+                      <b>
+                        <font size="+1">Abstract:</font>
+                      </b>
+                      TBA.
+                    </p>
+                    <p style="text-align:justify">
+                      <b>
+                        <font size="+1">Bio:</font>
+                      </b>
+                      TBA.
+                    </p>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>11:40-12:05p</td>
+                <td>
+                  <div class="collapsible">Amanda Prorok (Cambridge) - Machine Learning for Multi-Agent and Multi-Robot Problems</div>
+                  <div class="hidden-content">
+                    <p style="margin-top:8pt; margin-bottom:7pt; text-align:justify">
+                      <b>
+                        <font size="+1">Abstract:</font>
+                      </b>
+                      TBA.
+                    </p>
+                    <p style="text-align:justify">
+                      <b>
+                        <font size="+1">Bio:</font>
+                      </b>
+                      TBA.
+                    </p>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>12:05-12:20p</td>
+                <td>Q/A and Discussion for Invited Session 2</td>
+              </tr>
+              <!--tr>
               <td style="color:navy">12:20p</td>
               <td style="color:navy">Break</td>
             </tr-->
-            <tr>
-              <td style="color:navy">1:00p</td>
-              <td style="color:navy">Invited Session 3</td>
-            </tr>
-            <tr>
-              <td>1:00-1:25p</td>
-              <td style="color:maroon">Chi Jin (Princeton)</td>
-            </tr>
-            <tr>
-              <td>1:25-1:50p</td>
-              <td style="color:maroon">Bo An (NTU)</td>
-            </tr>
-            <tr>
-              <td>1:50-2:10p</td>
-              <td>Q/A for Invited Session 3</td>
-            </tr>
-            <tr>
-              <td style="color:navy">2:10p</td>
-              <td style="color:navy">Poster Session</td>
-            </tr>
-            <!--tr>
+              <tr>
+                <td style="color:navy">1:00p</td>
+                <td style="color:navy">Invited Session 3</td>
+              </tr>
+              <tr>
+                <td>1:00-1:25p</td>
+                <td>
+                  <div class="collapsible">Chi Jin (Princeton)</div>
+                  <div class="hidden-content">
+                    <p style="margin-top:8pt; margin-bottom:7pt; text-align:justify">
+                      <b>
+                        <font size="+1">Abstract:</font>
+                      </b>
+                      TBA.
+                    </p>
+                    <p style="text-align:justify">
+                      <b>
+                        <font size="+1">Bio:</font>
+                      </b>
+                      TBA.
+                    </p>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>1:25-1:50p</td>
+                <td>
+                  <div class="collapsible">Bo An (NTU) - Deep Learning for Solving Large Scale Complex Games</div>
+                  <div class="hidden-content">
+                    <p style="margin-top:8pt; margin-bottom:7pt; text-align:justify">
+                      <b>
+                        <font size="+1">Abstract:</font>
+                      </b>
+                      Some important breakthroughs in artificial intelligence in recent years (such as Libratus and
+                      security games) can be attributed to the development of large-scale game solving technology in the
+                      past decade. However, game solving technology cannot handle large scale complex games, and the
+                      academic community began to use deep learning techniques to solve such complex games. The talk
+                      will discuss important progress in this direction in recent years and future directions.
+                    </p>
+                    <p style="text-align:justify">
+                      <b>
+                        <font size="+1">Bio:</font>
+                      </b>
+                      Bo An is a President’s Council Chair Associate Professor at Nanyang Technological University,
+                      Singapore. His current research interests include artificial intelligence, multiagent systems,
+                      computational game theory, reinforcement learning, and optimization. Dr. An received many awards
+                      inlucding INFORMS Daniel H. Wagner Prize for Excellence in Operations Research Practice. He led
+                      the team HogRider which won the 2017 Microsoft Collaborative AI Challenge. He was named to IEEE
+                      Intelligent Systems' "AI's 10 to Watch" list for 2018.
+                    </p>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>1:50-2:10p</td>
+                <td>Q/A for Invited Session 3</td>
+              </tr>
+              <tr>
+                <td style="color:navy">2:10p</td>
+                <td style="color:navy">Poster Session</td>
+              </tr>
+              <!--tr>
               <td style="color:navy">3:00p</td>
               <td style="color:navy">Coffee Break</td>
             </tr-->
-            <tr>
-              <td style="color:navy">3:15p</td>
-              <td style="color:navy">Invited Session 4</td>
-            </tr>
-            <tr>
-              <td>3:15-3:40p</td>
-              <td style="color:maroon">Jakob Foerster (Oxford)</td>
-            </tr>
-            <tr>
-              <td>3:40-4:05p</td>
-              <td style="color:maroon">Karl Tuyls (U Liverpool)</td>
-            </tr>
-            <tr>
-              <td>4:05-4:25p</td>
-              <td>Q/A for Invited Session 4</td>
-            </tr>
-            <tr>
-              <td style="color:navy">4:25-4:50p</td>
-              <td style="color:navy">Concluding Remarks</td>
-            </tr>
-          </tbody>
+              <tr>
+                <td style="color:navy">3:15p</td>
+                <td style="color:navy">Invited Session 4</td>
+              </tr>
+              <tr>
+                <td>3:15-3:40p</td>
+                <td>
+                  <div class="collapsible">Jakob Foerster (Oxford)</div>
+                  <div class="hidden-content">
+                    <p style="margin-top:8pt; margin-bottom:7pt; text-align:justify">
+                      <b>
+                        <font size="+1">Abstract:</font>
+                      </b>
+                      TBA.
+                    </p>
+                    <p style="text-align:justify">
+                      <b>
+                        <font size="+1">Bio:</font>
+                      </b>
+                      TBA.
+                    </p>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>3:40-4:05p</td>
+                <td>
+                  <div class="collapsible">Karl Tuyls (U Liverpool)</div>
+                  <div class="hidden-content">
+                    <p style="margin-top:8pt; margin-bottom:7pt; text-align:justify">
+                      <b>
+                        <font size="+1">Abstract:</font>
+                      </b>
+                      TBA.
+                    </p>
+                    <p style="text-align:justify">
+                      <b>
+                        <font size="+1">Bio:</font>
+                      </b>
+                      TBA.
+                    </p>
+                  </div>
+                  <div class="hidden-content">
+                    <p style="margin-top:8pt; margin-bottom:7pt; text-align:justify">
+                      <b>
+                        <font size="+1">Abstract:</font>
+                      </b>
+                      TBA.
+                    </p>
+                    <p style="text-align:justify">
+                      <b>
+                        <font size="+1">Bio:</font>
+                      </b>
+                      TBA.
+                    </p>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>4:05-4:25p</td>
+                <td>Q/A for Invited Session 3</td>
+              </tr>
+
+
+
+
+
+              <tr>
+                <td style="color:navy">4:25-4:50p</td>
+                <td style="color:navy">Concluding Remarks</td>
+              </tr>
+            </tbody>
           </table>
         </font>
 
-        </div>
+      </div>
 
-        <br>
-        <!--div class="row">
+      <!--div class="row">
 
           <h4> Contributed Papers </h4>
 
@@ -597,15 +873,15 @@
           </font>
         </div-->
 
-        </div>
-
-      </div>
     </div>
 
+  </div>
+  </div>
 
 
 
-    <!--div class="site-section bg-image overlay" style="background-image: url('images/hero_bg_4.jpg');" id="section-how-it-works">
+
+  <!--div class="site-section bg-image overlay" style="background-image: url('images/hero_bg_4.jpg');" id="section-how-it-works">
       <div class="container">
         <div class="row justify-content-center mb-5">
           <div class="col-md-7 text-center border-primary">
@@ -662,98 +938,103 @@
       </div>
     </div-->
 
-    <div class="site-section border-bottom" id="section-our-team">
-      <div class="container">
-        <div class="row justify-content-center mb-5">
-          <div class="col-md-7 text-center border-primary">
-            <h2 class="font-weight-light text-primary" data-aos="fade">Organizers</h2>
-          </div>
+  <div class="site-section border-bottom" id="section-our-team">
+    <div class="container">
+      <div class="row justify-content-center mb-5">
+        <div class="col-md-7 text-center border-primary">
+          <h2 class="font-weight-light text-primary" data-aos="fade">Organizers</h2>
         </div>
-        <div class="row">
-          <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="100">
-            <div class="person">
-              <img src="images/person_1.jpg" alt="Image" class="img-fluid rounded mb-5 w-75 rounded-circle">
-              <h3>Panagiotis Tsiotras</h3>
-              <p class="position">Professor</p>
-              <p class="mb-4"> School of Aerospace Engineering <br> Georgia Institute of Technology </p>
-              <ul class="ul-social-circle">
-                <!--li><a href="https://www.linkedin.com/in/ptsiotras/" target="_blank"><span class="icon-linkedin"></span></a></li-->
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="200">
-            <div class="person">
-              <img src="images/person_2.jpg" alt="Image" class="img-fluid rounded mb-5 w-75 rounded-circle">
-              <h3>Matthew Gombolay</h3>
-              <p class="position">Assistant Professor</p>
-              <p class="mb-4">School of Interactive Computing <br> Georgia Institute of Technology</p>
-              <ul class="ul-social-circle">
-                <!--li><a href="https://www.linkedin.com/in/johannes-betz-254049107/" target="_blank"><span class="icon-linkedin"></span></a></li-->
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="300">
-            <div class="person">
-              <img src="images/person_3.jpg" alt="Image" class="img-fluid rounded mb-5 w-75 rounded-circle">
-              <h3>Scott Guan</h3>
-              <p class="position">Ph.D. Student</p>
-              <p class="mb-4">School of Aerospace Engineering <br> Georgia Institute of Technology</p>
-              <ul class="ul-social-circle">
-                <!--li><a href="https://www.linkedin.com/in/yue-guan-7177a5b6/" target="_blank"><span class="icon-linkedin"></span></a></li-->
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="100">
-            <div class="person">
-              <img src="images/person_4.jpg" alt="Image" class="img-fluid rounded mb-5 w-75 rounded-circle">
-              <h3>Esmaeil Seraj</h3>
-              <p class="position">Ph.D. Student</p>
-              <p class="mb-4">School of Electrical and Computer Engineering <br> Georgia Institute of Technology </p>
-              <ul class="ul-social-circle">
-                <!--li><a href="https://www.linkedin.com/in/esmaeil-seraj-70590b80/" target="_blank"><span class="icon-linkedin"></span></a></li-->
-              </ul>
-            </div>
-          </div>
-        </div>
-
-
-        <br>
-        <div class="text-justify pb-1 border-primary mb-4">
-          <h2 class="text-primary">Program Committee</h2>
-        </div>
-        <div class="row mb-5">
-            <br>
-            <ul>
-              <li>Dipankar Maity, University of North Carolina</li>
-              <li>Daigo Shishika, George Mason University</li>
-              <li>Mi Zhou, Georgia Institute of Technology</li>
-              <li>Qifan Zhang, Google</li>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="100">
+          <div class="person">
+            <img src="images/person_1.jpg" alt="Image" class="img-fluid rounded mb-5 w-75 rounded-circle">
+            <h3>Panagiotis Tsiotras</h3>
+            <p class="position">Professor</p>
+            <p class="mb-4"> School of Aerospace Engineering <br> Georgia Institute of Technology </p>
+            <ul class="ul-social-circle">
+              <!--li><a href="https://www.linkedin.com/in/ptsiotras/" target="_blank"><span class="icon-linkedin"></span></a></li-->
             </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="200">
+          <div class="person">
+            <img src="images/person_2.jpg" alt="Image" class="img-fluid rounded mb-5 w-75 rounded-circle">
+            <h3>Matthew Gombolay</h3>
+            <p class="position">Assistant Professor</p>
+            <p class="mb-4">School of Interactive Computing <br> Georgia Institute of Technology</p>
+            <ul class="ul-social-circle">
+              <!--li><a href="https://www.linkedin.com/in/johannes-betz-254049107/" target="_blank"><span class="icon-linkedin"></span></a></li-->
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="300">
+          <div class="person">
+            <img src="images/person_3.jpg" alt="Image" class="img-fluid rounded mb-5 w-75 rounded-circle">
+            <h3>Scott Guan</h3>
+            <p class="position">Ph.D. Student</p>
+            <p class="mb-4">School of Aerospace Engineering <br> Georgia Institute of Technology</p>
+            <ul class="ul-social-circle">
+              <!--li><a href="https://www.linkedin.com/in/yue-guan-7177a5b6/" target="_blank"><span class="icon-linkedin"></span></a></li-->
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="100">
+          <div class="person">
+            <img src="images/person_4.jpg" alt="Image" class="img-fluid rounded mb-5 w-75 rounded-circle">
+            <h3>Esmaeil Seraj</h3>
+            <p class="position">Ph.D. Student</p>
+            <p class="mb-4">School of Electrical and Computer Engineering <br> Georgia Institute of Technology </p>
+            <ul class="ul-social-circle">
+              <!--li><a href="https://www.linkedin.com/in/esmaeil-seraj-70590b80/" target="_blank"><span class="icon-linkedin"></span></a></li-->
+            </ul>
+          </div>
+        </div>
+      </div>
 
-        </div>
 
-        <div class="text-justify pb-1 border-primary mb-4">
-          <h2 class="text-primary">Contact</h2>
-        </div>
-        <div class="row mb-5">
-            <p><font size="+1"> &nbsp&nbsp&nbspIf you have any question regarding the workshop, please contact the <a href = "mailto: iros22dmmas@easychair.org">Program Committee</a>. </font></p>
-        </div>
+      <br>
+      <div class="text-justify pb-1 border-primary mb-4">
+        <h2 class="text-primary">Program Committee</h2>
+      </div>
+      <div class="row mb-5">
+        <br>
+        <ul>
+          <li>Dipankar Maity, University of North Carolina</li>
+          <li>Daigo Shishika, George Mason University</li>
+          <li>Mi Zhou, Georgia Institute of Technology</li>
+          <!-- <li>Qifan Zhang, Google</li> -->
+        </ul>
 
       </div>
+
+      <div class="text-justify pb-1 border-primary mb-4">
+        <h2 class="text-primary">Contact</h2>
+      </div>
+      <div class="row mb-5">
+        <p>
+          <font size="+1"> &nbsp&nbsp&nbspIf you have any question regarding the workshop, please contact the <a
+              href="mailto: iros22dmmas@easychair.org">Workshop Organizers</a>. </font>
+        </p>
+      </div>
+
     </div>
+  </div>
 
 
 
 
-    <div class="site-section bg-light" id="section-sponsors">
-      <div class="container">
-        <div class="row justify-content-center mb-5" data-aos="fade-up">
-          <div class="col-md-10 text-center border-primary">
-            <h2 class="mb-0 text-primary">Sponsors</h2>
-            <h4 class="color-black-opacity-5">This workshop is supported by the <strong>IEEE RAS TC on Multi-Robot Systems</strong> and the <strong>IEEE RAS TC on Algorithms for Planning and Control of Robot Motion.</strong></h4>
-          </div>
+  <div class="site-section bg-light" id="section-sponsors">
+    <div class="container">
+      <div class="row justify-content-center mb-5" data-aos="fade-up">
+        <div class="col-md-10 text-center border-primary">
+          <h2 class="mb-0 text-primary">Sponsors</h2>
+          <h4 class="color-black-opacity-5">This workshop is supported by the <strong>IEEE RAS TC on Multi-Robot
+              Systems</strong> and the <strong>IEEE RAS TC on Algorithms for Planning and Control of Robot
+              Motion.</strong></h4>
         </div>
-        <!--div class="row justify-content-center">
+      </div>
+      <!--div class="row justify-content-center">
           <div class="col-md-4">
               <div>
                 <h3>AD Link technologies</h3>
@@ -766,23 +1047,23 @@
                 <img src="images/sponsors/lgsvl.jpg" alt="Image" class="img-fluid rounded w-75 rounded-circle">
               </div>
           </div-->
-          <!--div class="col-md-4">
+      <!--div class="col-md-4">
               <div>
                 <h3>Autoware Foundation</h3>
                 <img src="images/sponsors/autoware.jpg" alt="Image" class="img-fluid rounded w-75 rounded-circle">
               </div>
           </div-->
-          </div-->
+      </div-->
 
 
 
-        </div>
-      </div>
+    </div>
+  </div>
 
 
 
 
-    <!--div class="site-section block-13" id="section-industries">
+  <!--div class="site-section block-13" id="section-industries">
 
       <div class="container">
         <div class="row justify-content-center mb-5">
@@ -1047,7 +1328,7 @@
     </div-->
 
 
-    <!--footer class="site-footer">
+  <!--footer class="site-footer">
       <div class="container">
         <div class="row">
           <div class="col-md-9">
@@ -1115,6 +1396,26 @@
   <script src="js/aos.js"></script>
 
   <script src="js/main.js"></script>
+  <script>
+    var coll = document.getElementsByClassName("collapsible");
 
-  </body>
+    Array.from(coll).forEach((col, i) => {
+      col.addEventListener("click", function () {
+        this.classList.toggle("active");
+        showHideRow(`hidden-content`, i);
+      });
+    });
+
+    function showHideRow(className, index) {
+      var content = document.getElementsByClassName(className)[index];
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
+    }
+  </script>
+
+</body>
+
 </html>
