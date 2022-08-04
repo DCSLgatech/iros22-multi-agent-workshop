@@ -1330,6 +1330,28 @@ h1, h2, h3, h4, h5,
     -ms-transform: translateX(0%);
     transform: translateX(0%); }
 
+  .border-primary-black {
+    position: relative; }
+    .border-primary h2 {
+      text-transform: uppercase;
+      font-weight: 700 !important; }
+    .border-primary-black:after {
+      position: absolute;
+      content: "";
+      bottom: 0.1;
+      width: 80px;
+      height: 3px;
+      background: #000000; }
+    .border-primary-black.text-center:after {
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      transform: translateX(-50%); }
+    .border-primary-black.text-left:after {
+      -webkit-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+      transform: translateX(0%); }    
+
 .testimonial {
   max-width: 800px;
   margin: 0 auto !important;
