@@ -187,7 +187,7 @@
           <font size="+1">All authors and participants need to register through IROS-22 <a
               href="https://iros2022.org/registrationvisa/registration/#virtual-online-registration-fees9"
               target="_blank">registration website</a>.
-              Register for workshop only is possible!
+            Register for workshop only is possible!
             &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
           </font>
         </p>
@@ -671,13 +671,27 @@
               <tr>
                 <td>1:00-1:25p</td>
                 <td>
-                  <div class="collapsible">Chi Jin (Princeton)</div>
+                  <div class="collapsible">Chi Jin (Princeton) - V-Learning --- A Simple, Efficient, Decentralized
+                    Algorithm for Multiagent RL</div>
                   <div class="hidden-content">
                     <p style="margin-top:8pt; margin-bottom:7pt; text-align:justify">
                       <b>
                         <font size="+2">Abstract:</font>
                       </b>
-                      TBA.
+                      A major challenge of multiagent reinforcement learning (MARL) is the curse of multiagents, where
+                      the size of the joint action space scales exponentially with the number of agents. This remains to
+                      be a bottleneck for designing efficient MARL algorithms even in a basic scenario with finitely
+                      many states and actions. This paper resolves this challenge for the model of episodic Markov
+                      games. We design a new class of fully decentralized algorithms---V-learning, which provably learns
+                      Nash equilibria (in the two-player zero-sum setting), correlated equilibria and coarse correlated
+                      equilibria (in the multiplayer general-sum setting) in a number of samples that only scales with
+                      \max_i A_i, where A_i is the number of actions for the ith player. This is in sharp contrast to
+                      the size of the joint action space which is \prod_i A_i. V-learning (in its basic form) is a new
+                      class of single-agent RL algorithms that convert any adversarial bandit algorithm with suitable
+                      regret guarantees into a RL algorithm. Similar to the classical Q-learning algorithm, it performs
+                      incremental updates to the value functions. Different from Q-learning, it only maintains the
+                      estimates of V-values instead of Q-values. This key difference allows V-learning to achieve the
+                      claimed guarantees in the MARL setting by simply letting all agents run V-learning independently.
                     </p>
                   </div>
                 </td>
